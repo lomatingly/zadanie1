@@ -1,0 +1,51 @@
+#include <iostream>
+#include <windows.h>//для отображения кириллицы
+using namespace std;
+
+int main() {
+    int a,i,b,s;
+    s=0;
+    SetConsoleOutputCP(CP_UTF8);//для отображения кириллицы
+    cout<<"Введите месяц-";
+    cin>>a;
+    cout<<"Введите день месяца-";
+    cin>>b;
+    for (i=1;i<a;i++){
+        if (i==1){
+            s=s+31;
+        }
+        if (i==2){
+            s=s+28;
+        }
+        if (i==3){
+            s=s+31;
+        }
+        if (i==4){
+            s=s+30;
+        }
+        if (i==5){
+            s=s+31;
+        }
+        if (i==6){
+            s=s+30;
+        }
+        if (i==7){
+            s=s+31;
+        }
+        if (i==8){
+            s=s+31;
+        }
+        if (i==9){
+            s=s+30;
+        }
+        if (i==10){
+            s=s+31;
+        }
+        if (i==11){
+            s=s+30;
+        }
+
+    }
+    s=s+b;
+    cout<<"До нового года осталось "<<(365-s)<<" дней(день)";
+}
